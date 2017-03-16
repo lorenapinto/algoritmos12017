@@ -1,0 +1,31 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+
+
+using namespace std;
+float sumatoria (float x, float n);
+
+void main ()
+{
+	float n,x,sum;
+	cout<<"Ingrese el valor de x: ";
+	cin>>x;
+	cout<<"Ingrese el valor de n: ";
+	cin>>n;
+	sum= sumatoria (x,n);
+	cout<<"La sumatoria es igual a: "<<sum;
+	getch ();
+
+}
+
+float sumatoria (float x, float n)
+{
+	float suma=0,i;
+	for (i=1;i<=n;i++)
+	{
+		suma=suma + pow((1+(1/x)),i);
+	}
+	return (suma);
+}
